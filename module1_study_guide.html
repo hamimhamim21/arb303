@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 - ARB303 Study Guide | المحاضرة الأولى</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Amiri', serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 2;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .nav-container {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(135deg, #00695c 0%, #00897b 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .nav-title {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 12px;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.4);
+            transform: translateY(-2px);
+        }
+        .nav-links .nav-ar { font-size: 18px; font-weight: bold; }
+        .nav-links .nav-en { font-size: 12px; opacity: 0.85; font-family: Georgia, serif; }
+        .main-title {
+            text-align: center;
+            background: linear-gradient(135deg, #2c3e50 0%, #00695c 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .main-title h1 { font-size: 48px; margin: 0 0 10px 0; }
+        .main-title .subtitle { font-size: 24px; opacity: 0.9; }
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-size: 36px;
+            color: #00695c;
+            border-bottom: 4px solid #00897b;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .section-subtitle {
+            font-size: 28px;
+            color: #00897b;
+            margin: 25px 0 15px 0;
+        }
+        .arabic-large {
+            font-size: 42px;
+            color: #00695c;
+            font-weight: 700;
+            line-height: 2.2;
+        }
+        .arabic-medium {
+            font-size: 32px;
+            color: #2c3e50;
+            line-height: 2;
+        }
+        .arabic-text {
+            font-size: 28px;
+            color: #2c3e50;
+            line-height: 1.9;
+        }
+        .english-text {
+            font-family: Georgia, serif;
+            direction: ltr;
+            text-align: left;
+            color: #555;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .grammar-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-right: 5px solid #00695c;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .rule-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-right: 5px solid #ff9800;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-right: 5px solid #f44336;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-right: 5px solid #2196f3;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 22px;
+        }
+        th {
+            background: linear-gradient(135deg, #00695c 0%, #00897b 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        tr:nth-child(even) { background: #f8f9fa; }
+        tr:hover { background: #e8f5e9; }
+        .pronoun-cell {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            font-weight: bold;
+            color: #00695c;
+        }
+        .example-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-right: 4px solid #00897b;
+        }
+        .example-ar {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .example-en {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            color: #666;
+            direction: ltr;
+            text-align: left;
+        }
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #00695c 0%, #00897b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 105, 92, 0.4);
+            z-index: 1001;
+            transition: all 0.3s;
+        }
+        .home-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 105, 92, 0.5);
+        }
+        .home-btn svg { width: 22px; height: 22px; fill: white; }
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .vocab-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+        .vocab-item:hover {
+            border-color: #00897b;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .vocab-ar { font-size: 26px; color: #00695c; font-weight: bold; }
+        .vocab-en { font-family: Georgia, serif; font-size: 14px; color: #666; }
+        .formula-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .formula {
+            font-size: 36px;
+            color: #00695c;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .arabic-large { font-size: 32px; }
+            .arabic-medium { font-size: 26px; }
+            .arabic-text { font-size: 22px; }
+            .section-title { font-size: 28px; }
+            table { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="home-btn" title="Back to Home">
+    <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+</a>
+
+<nav class="nav-container">
+    <div class="nav-title">المحاضرة الأولى - Lecture 1</div>
+    <div class="nav-links">
+        <a href="#verb"><span class="nav-ar">الفعل</span><span class="nav-en">Verb</span></a>
+        <a href="#ta3ajjub"><span class="nav-ar">فعل التعجب</span><span class="nav-en">Exclamatory</span></a>
+        <a href="#nida"><span class="nav-ar">النداء</span><span class="nav-en">Vocative</span></a>
+        <a href="#jam3"><span class="nav-ar">جمع المؤنث</span><span class="nav-en">Fem. Plural</span></a>
+        <a href="#hamza"><span class="nav-ar">همزة الاستفهام</span><span class="nav-en">Interrogative</span></a>
+        <a href="#mawsul"><span class="nav-ar">الاسم الموصول</span><span class="nav-en">Relative</span></a>
+        <a href="#maqsur"><span class="nav-ar">الاسم المقصور</span><span class="nav-en">Deficient</span></a>
+        <a href="#ma-jar"><span class="nav-ar">ما + حروف الجر</span><span class="nav-en">Ma + Prep</span></a>
+        <a href="#vocab"><span class="nav-ar">المفردات</span><span class="nav-en">Vocabulary</span></a>
+        <a href="#quiz"><span class="nav-ar">التمارين</span><span class="nav-en">Quizzes</span></a>
+    </div>
+</nav>
+
+<div class="main-title">
+    <h1>المُحَاضَرَةُ الأُولَى</h1>
+    <div class="subtitle">Lecture 1 - الدَّرْسُ التَّاسِعُ (Lesson 9)</div>
+</div>
+
+<!-- Verb Section -->
+<section class="section" id="verb">
+    <h2 class="section-title">الفِعْلُ: خَرَجَ - يَخْرُجُ</h2>
+    <p class="english-text">The Verb: To leave / To go out</p>
+
+    <div class="formula-box">
+        <div class="formula">خَرَجَ - يَخْرُجُ - اخْرُجْ - خُرُوجًا</div>
+        <p class="english-text">Past - Present - Imperative - Masdar (Verbal Noun)</p>
+    </div>
+
+    <h3 class="section-subtitle">جَدْوَلُ التَّصْرِيفِ - Conjugation Table</h3>
+
+    <table>
+        <tr>
+            <th>الضَّمِير</th>
+            <th>المَاضِي</th>
+            <th>المُضَارِع</th>
+            <th>الأَمْر</th>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">أَنَا</td>
+            <td>خَرَجْتُ</td>
+            <td>أَخْرُجُ</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">نَحْنُ</td>
+            <td>خَرَجْنَا</td>
+            <td>نَخْرُجُ</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">أَنْتَ</td>
+            <td>خَرَجْتَ</td>
+            <td>تَخْرُجُ</td>
+            <td>اخْرُجْ</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">أَنْتِ</td>
+            <td>خَرَجْتِ</td>
+            <td>تَخْرُجِينَ</td>
+            <td>اخْرُجِي</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">أَنْتُمَا</td>
+            <td>خَرَجْتُمَا</td>
+            <td>تَخْرُجَانِ</td>
+            <td>اخْرُجَا</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">أَنْتُمْ</td>
+            <td>خَرَجْتُمْ</td>
+            <td>تَخْرُجُونَ</td>
+            <td>اخْرُجُوا</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">أَنْتُنَّ</td>
+            <td>خَرَجْتُنَّ</td>
+            <td>تَخْرُجْنَ</td>
+            <td>اخْرُجْنَ</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">هُوَ</td>
+            <td>خَرَجَ</td>
+            <td>يَخْرُجُ</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">هِيَ</td>
+            <td>خَرَجَتْ</td>
+            <td>تَخْرُجُ</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">هُمَا (م)</td>
+            <td>خَرَجَا</td>
+            <td>يَخْرُجَانِ</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">هُمَا (مؤ)</td>
+            <td>خَرَجَتَا</td>
+            <td>تَخْرُجَانِ</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">هُمْ</td>
+            <td>خَرَجُوا</td>
+            <td>يَخْرُجُونَ</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">هُنَّ</td>
+            <td>خَرَجْنَ</td>
+            <td>يَخْرُجْنَ</td>
+            <td>-</td>
+        </tr>
+    </table>
+
+    <h3 class="section-subtitle">أَمْثِلَة - Examples</h3>
+
+    <div class="example-box">
+        <div class="example-ar">هَذَا الرَّجُلُ يَخْرُجُ مِنَ البَيْتِ قَبْلَ العَصْرِ</div>
+        <div class="example-en">This man goes out from the house before Asr (prayer time)</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">لَا تَخْرُجْ مِنَ الغُرْفَةِ قَبْلَ أَبِيكَ</div>
+        <div class="example-en">Don't go out from the room before your father</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">خَرَجَ الطُّلَّابُ مِنَ الفَصْلِ بَعْدَ خُرُوجِ المُعَلِّمِ</div>
+        <div class="example-en">The students left the classroom after the teacher left</div>
+    </div>
+</section>
+
+<!-- Ta3ajjub Section -->
+<section class="section" id="ta3ajjub">
+    <h2 class="section-title">فِعْلُ التَّعَجُّبِ - Exclamatory Verb</h2>
+    <p class="english-text">Expressing wonder, surprise, or admiration</p>
+
+    <div class="formula-box">
+        <div class="formula">مَا أَفْعَلَ + المُتَعَجَّب مِنْهُ</div>
+        <p class="english-text">Pattern: ما + أَفْعَلَ (verb on pattern أَفْعَلَ) + the thing wondered at</p>
+    </div>
+
+    <div class="rule-box">
+        <h4 class="arabic-medium">القَاعِدَة - The Rule</h4>
+        <p class="arabic-text">المُتَعَجَّبُ مِنْهُ يَكُونُ دَائِمًا مَنْصُوبًا</p>
+        <p class="english-text">The object of wonder is always in the accusative case (mansoob)</p>
+    </div>
+
+    <h3 class="section-subtitle">أَمْثِلَة - Examples</h3>
+
+    <div class="vocab-grid">
+        <div class="vocab-item">
+            <div class="vocab-ar">مَا أَطْوَلَ هَذَا الرَّجُلَ!</div>
+            <div class="vocab-en">How tall is this man!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">مَا أَكْبَرَ هَذَا البَيْتَ!</div>
+            <div class="vocab-en">How big is this house!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">مَا أَجْمَلَ هَذِهِ السَّيَّارَةَ!</div>
+            <div class="vocab-en">How beautiful is this car!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">مَا أَبْرَدَ هَذَا المَاءَ!</div>
+            <div class="vocab-en">How cold is this water!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">مَا أَسْهَلَ اللُّغَةَ العَرَبِيَّةَ!</div>
+            <div class="vocab-en">How easy is the Arabic language!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">مَا أَرْخَصَ هَذَا القَلَمَ!</div>
+            <div class="vocab-en">How cheap is this pen!</div>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <h4>تَحْوِيلُ الصِّفَةِ إِلَى فِعْلِ التَّعَجُّبِ</h4>
+        <p class="english-text">Converting adjectives to exclamatory form:</p>
+        <table>
+            <tr><th>الصِّفَة</th><th>فِعْلُ التَّعَجُّبِ</th></tr>
+            <tr><td>طَوِيل (tall)</td><td>أَطْوَلَ</td></tr>
+            <tr><td>كَبِير (big)</td><td>أَكْبَرَ</td></tr>
+            <tr><td>جَمِيل (beautiful)</td><td>أَجْمَلَ</td></tr>
+            <tr><td>سَهْل (easy)</td><td>أَسْهَلَ</td></tr>
+            <tr><td>حَسَن (good)</td><td>أَحْسَنَ</td></tr>
+            <tr><td>سَرِيع (fast)</td><td>أَسْرَعَ</td></tr>
+        </table>
+    </div>
+</section>
+
+<!-- Nida Section -->
+<section class="section" id="nida">
+    <h2 class="section-title">النِّدَاءُ - The Vocative</h2>
+    <p class="english-text">Calling or addressing someone</p>
+
+    <div class="formula-box">
+        <div class="formula">يَا + المُنَادَى</div>
+        <p class="english-text">Ya + the person being called</p>
+    </div>
+
+    <div class="grammar-box">
+        <h4 class="arabic-medium">أَنْوَاعُ المُنَادَى - Types of Vocative</h4>
+        <p class="arabic-text"><strong>١. المُفْرَد العَلَم:</strong> يُبْنَى عَلَى الضَّمِّ</p>
+        <p class="english-text">1. Single proper noun: Built on dammah</p>
+        <p class="arabic-text"><strong>٢. المُضَاف:</strong> يَكُونُ مَنْصُوبًا</p>
+        <p class="english-text">2. Annexed (idafa): In accusative case</p>
+    </div>
+
+    <h3 class="section-subtitle">أَمْثِلَة - Examples</h3>
+
+    <div class="vocab-grid">
+        <div class="vocab-item">
+            <div class="vocab-ar">يَا مُحَمَّدُ</div>
+            <div class="vocab-en">O Muhammad!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">يَا حَامِدُ</div>
+            <div class="vocab-en">O Hamid!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">يَا أُسْتَاذُ</div>
+            <div class="vocab-en">O Teacher!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">يَا عَلِيُّ</div>
+            <div class="vocab-en">O Ali!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">يَا أُخْتَ حَامِدٍ</div>
+            <div class="vocab-en">O sister of Hamid!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">يَا عَبْدَ اللهِ</div>
+            <div class="vocab-en">O Abdullah!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">يَا سَائِقَ السَّيَّارَةِ</div>
+            <div class="vocab-en">O driver of the car!</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">يَا إِمَامَ المَسْجِدِ</div>
+            <div class="vocab-en">O Imam of the mosque!</div>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <h4>مُلَاحَظَة - Note</h4>
+        <p class="arabic-text">أَبُو بَكْرٍ ← يَا أَبَا بَكْرٍ (الأَسْمَاءُ الخَمْسَةُ تُنْصَبُ بِالأَلِفِ)</p>
+        <p class="english-text">Abu Bakr → Ya Aba Bakr (Five nouns take alif in accusative)</p>
+    </div>
+</section>
+
+<!-- Jam3 Section -->
+<section class="section" id="jam3">
+    <h2 class="section-title">جَمْعُ المُؤَنَّثِ السَّالِمِ - Sound Feminine Plural</h2>
+    <p class="english-text">Regular feminine plural formed by adding ات</p>
+
+    <div class="formula-box">
+        <div class="formula">المُفْرَد + ـَات = الجَمْع</div>
+        <p class="english-text">Singular + aat = Plural</p>
+    </div>
+
+    <div class="grammar-box">
+        <h4 class="arabic-medium">القَاعِدَة - The Rule</h4>
+        <p class="arabic-text">جَمْعُ المُؤَنَّثِ السَّالِمُ يُرْفَعُ بِالضَّمَّةِ وَيُنْصَبُ وَيُجَرُّ بِالكَسْرَةِ</p>
+        <p class="english-text">Sound feminine plural takes dammah for nominative, and kasrah for both accusative and genitive</p>
+    </div>
+
+    <h3 class="section-subtitle">أَمْثِلَة - Examples</h3>
+
+    <table>
+        <tr><th>المُفْرَد</th><th>الجَمْع</th><th>المَعْنَى</th></tr>
+        <tr><td>سَيَّارَة</td><td>سَيَّارَاتٌ</td><td>cars</td></tr>
+        <tr><td>طَالِبَة</td><td>طَالِبَاتٌ</td><td>female students</td></tr>
+        <tr><td>مَجَلَّة</td><td>مَجَلَّاتٌ</td><td>magazines</td></tr>
+        <tr><td>صَفْحَة</td><td>صَفَحَاتٌ</td><td>pages</td></tr>
+        <tr><td>كَلِمَة</td><td>كَلِمَاتٌ</td><td>words</td></tr>
+        <tr><td>طَبِيبَة</td><td>طَبِيبَاتٌ</td><td>female doctors</td></tr>
+    </table>
+
+    <div class="example-box">
+        <div class="example-ar">رَأَيْتُ سَيَّارَاتٍ كَثِيرَةً</div>
+        <div class="example-en">I saw many cars (accusative - kasrah)</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">سَأَلْتِ المُدِيرَةُ الطَّالِبَاتِ</div>
+        <div class="example-en">The principal (f) asked the female students</div>
+    </div>
+</section>
+
+<!-- Hamza Section -->
+<section class="section" id="hamza">
+    <h2 class="section-title">هَمْزَةُ الاسْتِفْهَامِ - Interrogative Hamzah</h2>
+    <p class="english-text">Using أ to form yes/no questions</p>
+
+    <div class="formula-box">
+        <div class="formula">أَ + الجُمْلَة = سُؤَال</div>
+        <p class="english-text">Hamzah + Statement = Question</p>
+    </div>
+
+    <div class="rule-box">
+        <h4 class="arabic-medium">قَاعِدَة مُهِمَّة - Important Rule</h4>
+        <p class="arabic-text">أَ + الـ = آلـ</p>
+        <p class="english-text">When أ meets الـ, they combine to form آلـ</p>
+    </div>
+
+    <h3 class="section-subtitle">أَمْثِلَة - Examples</h3>
+
+    <table>
+        <tr><th>الجُمْلَة</th><th>السُّؤَال</th><th>المَعْنَى</th></tr>
+        <tr>
+            <td>البِحَارُ جَمْعُ البَحْرِ</td>
+            <td>آلْبِحَارُ جَمْعُ البَحْرِ؟</td>
+            <td>Is "al-bihar" the plural of "bahr"?</td>
+        </tr>
+        <tr>
+            <td>الآنَ خَرَجْتَ</td>
+            <td>آلْآنَ خَرَجْتَ؟</td>
+            <td>Did you leave now?</td>
+        </tr>
+        <tr>
+            <td>المُدَرِّسُ مَرِيضٌ</td>
+            <td>آلْمُدَرِّسُ مَرِيضٌ؟</td>
+            <td>Is the teacher sick?</td>
+        </tr>
+        <tr>
+            <td>الطَّالِبُ الجَدِيدُ كَسَرَ الكُرْسِيَّ</td>
+            <td>آلطَّالِبُ الجَدِيدُ كَسَرَ الكُرْسِيَّ؟</td>
+            <td>Did the new student break the chair?</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Mawsul Section -->
+<section class="section" id="mawsul">
+    <h2 class="section-title">الاسْمُ المَوْصُولُ - Relative Pronouns</h2>
+    <p class="english-text">Words meaning "who, which, that"</p>
+
+    <table>
+        <tr><th>النَّوْع</th><th>المُفْرَد</th><th>المُثَنَّى</th><th>الجَمْع</th></tr>
+        <tr>
+            <td class="pronoun-cell">مُذَكَّر</td>
+            <td>الَّذِي</td>
+            <td>اللَّذَانِ / اللَّذَيْنِ</td>
+            <td>الَّذِينَ</td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">مُؤَنَّث</td>
+            <td>الَّتِي</td>
+            <td>اللَّتَانِ / اللَّتَيْنِ</td>
+            <td>اللَّاتِي / اللَّوَاتِي</td>
+        </tr>
+    </table>
+
+    <h3 class="section-subtitle">أَمْثِلَة - Examples</h3>
+
+    <div class="example-box">
+        <div class="example-ar">مَنِ الفَتَى الَّذِي خَرَجَ مِنَ الفَصْلِ الآنَ؟</div>
+        <div class="example-en">Who is the boy who left the classroom now?</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">مَنِ الفِتْيَةُ الَّذِينَ خَرَجُوا مِنَ الفَصْلِ الآنَ؟</div>
+        <div class="example-en">Who are the boys who left the classroom now?</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">مَنِ الرَّجُلُ الَّذِي دَخَلَ بَيْتَكُمُ الآنَ؟</div>
+        <div class="example-en">Who is the man who entered your house now?</div>
+    </div>
+</section>
+
+<!-- Maqsur Section -->
+<section class="section" id="maqsur">
+    <h2 class="section-title">الاسْمُ المَقْصُورُ - Deficient Noun</h2>
+    <p class="english-text">Nouns ending in alif maqsurah (ى)</p>
+
+    <div class="grammar-box">
+        <h4 class="arabic-medium">القَاعِدَة - The Rule</h4>
+        <p class="arabic-text">الاسْمُ المَقْصُورُ: اسْمٌ مُعْرَبٌ آخِرُهُ أَلِفٌ لَازِمَة</p>
+        <p class="english-text">A deficient noun ends with a fixed alif and takes hidden case endings</p>
+    </div>
+
+    <h3 class="section-subtitle">أَمْثِلَة مَعَ الضَّمَائِرِ - Examples with Pronouns</h3>
+
+    <table>
+        <tr><th>الكَلِمَة</th><th>+ هُ</th><th>+ هَا</th><th>+ هُمَا</th></tr>
+        <tr>
+            <td>مَعْنًى (meaning)</td>
+            <td>مَعْنَاهُ</td>
+            <td>مَعْنَاهَا</td>
+            <td>مَعْنَاهُمَا</td>
+        </tr>
+        <tr>
+            <td>مَبْنًى (building)</td>
+            <td>مَبْنَاهُ</td>
+            <td>مَبْنَاهَا</td>
+            <td>مَبْنَاهُمَا</td>
+        </tr>
+        <tr>
+            <td>مُسْتَشْفًى (hospital)</td>
+            <td>مُسْتَشْفَاهُ</td>
+            <td>مُسْتَشْفَاهَا</td>
+            <td>مُسْتَشْفَاهُمَا</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Ma + Jar Section -->
+<section class="section" id="ma-jar">
+    <h2 class="section-title">مَا + حُرُوفُ الجَرِّ - Ma with Prepositions</h2>
+    <p class="english-text">Interrogative ما combined with prepositions</p>
+
+    <div class="rule-box">
+        <h4 class="arabic-medium">القَاعِدَة - The Rule</h4>
+        <p class="arabic-text">تُحْذَفُ أَلِفُ (مَا) الاسْتِفْهَامِيَّةِ إِذَا دَخَلَ عَلَيْهَا حَرْفُ جَرٍّ</p>
+        <p class="english-text">The alif of interrogative ما is dropped when preceded by a preposition</p>
+    </div>
+
+    <table>
+        <tr><th>الأَصْل</th><th>التَّرْكِيب</th><th>المَعْنَى</th></tr>
+        <tr>
+            <td>مِنْ + مَا</td>
+            <td>مِمَّ / مِمَّا</td>
+            <td>From what?</td>
+        </tr>
+        <tr>
+            <td>عَنْ + مَا</td>
+            <td>عَمَّ / عَمَّا</td>
+            <td>About what?</td>
+        </tr>
+        <tr>
+            <td>بِـ + مَا</td>
+            <td>بِمَ / بِمَا</td>
+            <td>With what?</td>
+        </tr>
+        <tr>
+            <td>لِـ + مَا</td>
+            <td>لِمَ / لِمَا</td>
+            <td>Why? / For what?</td>
+        </tr>
+        <tr>
+            <td>فِي + مَا</td>
+            <td>فِيمَ / فِيمَا</td>
+            <td>In what?</td>
+        </tr>
+    </table>
+
+    <h3 class="section-subtitle">أَمْثِلَة - Examples</h3>
+
+    <div class="example-box">
+        <div class="example-ar">مِمَّ خَلَقَ اللهُ الإِنْسَانَ؟</div>
+        <div class="example-en">From what did Allah create man?</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">بِمَ قَتَلْتَ الحَيَّةَ؟</div>
+        <div class="example-en">With what did you kill the snake?</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">لِمَ خَرَجْتَ مِنَ الفَصْلِ؟</div>
+        <div class="example-en">Why did you leave the classroom?</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">عَمَّ سَأَلْتَ المُدَرِّسَ؟</div>
+        <div class="example-en">About what did you ask the teacher?</div>
+    </div>
+</section>
+
+<!-- Vocabulary Section -->
+<section class="section" id="vocab">
+    <h2 class="section-title">المُفْرَدَاتُ - Vocabulary</h2>
+
+    <h3 class="section-subtitle">الأَفْعَال - Verbs</h3>
+    <div class="vocab-grid">
+        <div class="vocab-item">
+            <div class="vocab-ar">خَرَجَ - يَخْرُجُ</div>
+            <div class="vocab-en">to go out, to leave</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">دَعَا - يَدْعُو</div>
+            <div class="vocab-en">to invite, to call</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">رَجَعَ - يَرْجِعُ</div>
+            <div class="vocab-en">to return</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">ذَهَبَ - يَذْهَبُ</div>
+            <div class="vocab-en">to go</div>
+        </div>
+    </div>
+
+    <h3 class="section-subtitle">المُضَادَّات - Antonyms</h3>
+    <div class="vocab-grid">
+        <div class="vocab-item">
+            <div class="vocab-ar">خَرَجَ ↔ دَخَلَ</div>
+            <div class="vocab-en">went out ↔ entered</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">قَبْلَ ↔ بَعْدَ</div>
+            <div class="vocab-en">before ↔ after</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">طَوِيل ↔ قَصِير</div>
+            <div class="vocab-en">tall/long ↔ short</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">كَبِير ↔ صَغِير</div>
+            <div class="vocab-en">big ↔ small</div>
+        </div>
+    </div>
+
+    <h3 class="section-subtitle">كَلِمَات مُفِيدَة - Useful Words</h3>
+    <div class="vocab-grid">
+        <div class="vocab-item">
+            <div class="vocab-ar">الآنَ</div>
+            <div class="vocab-en">now</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">أَحْيَانًا</div>
+            <div class="vocab-en">sometimes</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">دَائِمًا</div>
+            <div class="vocab-en">always</div>
+        </div>
+        <div class="vocab-item">
+            <div class="vocab-ar">السُّوق</div>
+            <div class="vocab-en">the market</div>
+        </div>
+    </div>
+</section>
+
+<!-- Quiz Section -->
+<section class="section" id="quiz">
+    <h2 class="section-title">التَّمَارِينُ - Exercises & Quizzes</h2>
+    <p class="english-text">Test your knowledge - اخْتَبِرْ مَعْلُومَاتِكَ</p>
+
+    <!-- Quiz 1: Ta'ajjub -->
+    <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 25px; margin: 20px 0;">
+        <h3 class="section-subtitle">التَّمْرِينُ الأَوَّلُ: فِعْلُ التَّعَجُّبِ</h3>
+        <p class="english-text">Exercise 1: Convert to exclamatory form using مَا أَفْعَلَ</p>
+
+        <div class="example-box" style="background: white;">
+            <div class="example-ar">مِثَال: هَذَا الرَّجُلُ طَوِيلٌ ← مَا أَطْوَلَ هَذَا الرَّجُلَ!</div>
+            <div class="example-en">Example: This man is tall → How tall is this man!</div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <p class="arabic-text" style="font-weight: bold;">حَوِّلِ الجُمَلَ الآتِيَةَ:</p>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">١) هَذَا البَيْتُ كَبِيرٌ</p>
+                <p class="english-text">This house is big</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #00695c; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #2e7d32; margin-top: 10px;">مَا أَكْبَرَ هَذَا البَيْتَ!</p>
+                    <p class="english-text">How big is this house!</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٢) هَذِهِ السَّيَّارَةُ جَمِيلَةٌ</p>
+                <p class="english-text">This car is beautiful</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #00695c; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #2e7d32; margin-top: 10px;">مَا أَجْمَلَ هَذِهِ السَّيَّارَةَ!</p>
+                    <p class="english-text">How beautiful is this car!</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٣) هَذَا المَاءُ بَارِدٌ</p>
+                <p class="english-text">This water is cold</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #00695c; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #2e7d32; margin-top: 10px;">مَا أَبْرَدَ هَذَا المَاءَ!</p>
+                    <p class="english-text">How cold is this water!</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٤) اللُّغَةُ العَرَبِيَّةُ سَهْلَةٌ</p>
+                <p class="english-text">Arabic language is easy</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #00695c; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #2e7d32; margin-top: 10px;">مَا أَسْهَلَ اللُّغَةَ العَرَبِيَّةَ!</p>
+                    <p class="english-text">How easy is the Arabic language!</p>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz 2: Nida -->
+    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 15px; padding: 25px; margin: 20px 0;">
+        <h3 class="section-subtitle">التَّمْرِينُ الثَّانِي: النِّدَاءُ</h3>
+        <p class="english-text">Exercise 2: Add correct vocative endings</p>
+
+        <div class="example-box" style="background: white;">
+            <div class="example-ar">مِثَال: مُحَمَّدٌ ← يَا مُحَمَّدُ!</div>
+            <div class="example-en">Example: Muhammad → O Muhammad!</div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <p class="arabic-text" style="font-weight: bold;">أَضِفْ (يَا) مَعَ الضَّبْطِ الصَّحِيحِ:</p>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">١) حَامِدٌ</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #1565c0; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #1565c0; margin-top: 10px;">يَا حَامِدُ!</p>
+                    <p class="english-text">O Hamid! (proper noun - built on dammah)</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٢) أُسْتَاذٌ</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #1565c0; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #1565c0; margin-top: 10px;">يَا أُسْتَاذُ!</p>
+                    <p class="english-text">O Teacher! (single noun - built on dammah)</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٣) أُخْتُ حَامِدٍ</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #1565c0; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #1565c0; margin-top: 10px;">يَا أُخْتَ حَامِدٍ!</p>
+                    <p class="english-text">O sister of Hamid! (idafa - accusative with fathah)</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٤) عَبْدُ اللهِ</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #1565c0; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #1565c0; margin-top: 10px;">يَا عَبْدَ اللهِ!</p>
+                    <p class="english-text">O Abdullah! (idafa - accusative with fathah)</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٥) أَبُو بَكْرٍ</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #1565c0; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #1565c0; margin-top: 10px;">يَا أَبَا بَكْرٍ!</p>
+                    <p class="english-text">O Abu Bakr! (five nouns - accusative with alif)</p>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz 3: Jam' Mu'annath -->
+    <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 15px; padding: 25px; margin: 20px 0;">
+        <h3 class="section-subtitle">التَّمْرِينُ الثَّالِثُ: جَمْعُ المُؤَنَّثِ السَّالِمُ</h3>
+        <p class="english-text">Exercise 3: Convert to sound feminine plural</p>
+
+        <div class="example-box" style="background: white;">
+            <div class="example-ar">مِثَال: رَأَيْتُ سَيَّارَةً ← رَأَيْتُ سَيَّارَاتٍ</div>
+            <div class="example-en">Example: I saw a car → I saw cars</div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <p class="arabic-text" style="font-weight: bold;">حَوِّلْ إِلَى الجَمْعِ:</p>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">١) سَأَلَتِ المُدِيرَةُ الطَّالِبَةَ</p>
+                <p class="english-text">The principal asked the (female) student</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #e65100; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #e65100; margin-top: 10px;">سَأَلَتِ المُدِيرَةُ الطَّالِبَاتِ</p>
+                    <p class="english-text">The principal asked the (female) students</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٢) قَرَأْتُ المَجَلَّةَ</p>
+                <p class="english-text">I read the magazine</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #e65100; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #e65100; margin-top: 10px;">قَرَأْتُ المَجَلَّاتِ</p>
+                    <p class="english-text">I read the magazines</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٣) ذَهَبَتِ الطَّبِيبَةُ إِلَى المُسْتَشْفَى</p>
+                <p class="english-text">The (female) doctor went to the hospital</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #e65100; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #e65100; margin-top: 10px;">ذَهَبَتِ الطَّبِيبَاتُ إِلَى المُسْتَشْفَى</p>
+                    <p class="english-text">The (female) doctors went to the hospital</p>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz 4: Ma + Huroof al-Jarr -->
+    <div style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%); border-radius: 15px; padding: 25px; margin: 20px 0;">
+        <h3 class="section-subtitle">التَّمْرِينُ الرَّابِعُ: مَا + حُرُوفُ الجَرِّ</h3>
+        <p class="english-text">Exercise 4: Combine ما with prepositions</p>
+
+        <div style="margin-top: 20px;">
+            <p class="arabic-text" style="font-weight: bold;">أَكْمِلِ الفَرَاغَ:</p>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">١) ______ خَلَقَ اللهُ الإِنْسَانَ؟ (مِنْ + مَا)</p>
+                <p class="english-text">From what did Allah create man?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #c2185b; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #c2185b; margin-top: 10px;">مِمَّ خَلَقَ اللهُ الإِنْسَانَ؟</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٢) ______ قَتَلْتَ الحَيَّةَ؟ (بِـ + مَا)</p>
+                <p class="english-text">With what did you kill the snake?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #c2185b; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #c2185b; margin-top: 10px;">بِمَ قَتَلْتَ الحَيَّةَ؟</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٣) ______ خَرَجْتَ مِنَ الفَصْلِ؟ (لِـ + مَا)</p>
+                <p class="english-text">Why did you leave the classroom?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #c2185b; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #c2185b; margin-top: 10px;">لِمَ خَرَجْتَ مِنَ الفَصْلِ؟</p>
+                </details>
+            </div>
+
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <p class="arabic-text">٤) ______ سَأَلْتَ المُدَرِّسَ؟ (عَنْ + مَا)</p>
+                <p class="english-text">About what did you ask the teacher?</p>
+                <details style="margin-top: 10px;">
+                    <summary style="cursor: pointer; color: #c2185b; font-weight: bold;">إِظْهَارُ الإِجَابَةِ - Show Answer</summary>
+                    <p class="arabic-text" style="color: #c2185b; margin-top: 10px;">عَمَّ سَأَلْتَ المُدَرِّسَ؟</p>
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 30px; color: #666;">
+    <p>ARB303 - الدَّوْرَةُ الرَّابِعَةُ - المُحَاضَرَةُ الأُولَى</p>
+    <p style="font-family: Georgia, serif; margin-top: 10px;">Madinah Arabic Book 3 - Lecture 1</p>
+</footer>
+
+</body>
+</html>

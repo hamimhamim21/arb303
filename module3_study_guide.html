@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 - ARB303 Study Guide | المحاضرة الثالثة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Amiri', serif; max-width: 1200px; margin: 0 auto; padding: 20px; line-height: 2; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; }
+        .nav-container { position: sticky; top: 0; background: linear-gradient(135deg, #00695c 0%, #00897b 100%); padding: 15px; border-radius: 10px; margin-bottom: 30px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .nav-title { color: white; font-size: 24px; margin-bottom: 10px; text-align: center; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .nav-links a { color: white; text-decoration: none; padding: 10px 18px; background: rgba(255,255,255,0.2); border-radius: 12px; font-size: 14px; transition: all 0.3s; text-align: center; display: flex; flex-direction: column; gap: 2px; }
+        .nav-links a:hover { background: rgba(255,255,255,0.4); transform: translateY(-2px); }
+        .nav-links .nav-ar { font-size: 18px; font-weight: bold; }
+        .nav-links .nav-en { font-size: 12px; opacity: 0.85; font-family: Georgia, serif; }
+        .main-title { text-align: center; background: linear-gradient(135deg, #2c3e50 0%, #00695c 100%); color: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .main-title h1 { font-size: 48px; margin: 0 0 10px 0; }
+        .main-title .subtitle { font-size: 24px; opacity: 0.9; }
+        .section { background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section-title { font-size: 36px; color: #00695c; border-bottom: 4px solid #00897b; padding-bottom: 15px; margin-bottom: 25px; }
+        .section-subtitle { font-size: 28px; color: #00897b; margin: 25px 0 15px 0; }
+        .arabic-large { font-size: 42px; color: #00695c; font-weight: 700; line-height: 2.2; }
+        .arabic-medium { font-size: 32px; color: #2c3e50; line-height: 2; }
+        .arabic-text { font-size: 28px; color: #2c3e50; line-height: 1.9; }
+        .english-text { font-family: Georgia, serif; direction: ltr; text-align: left; color: #555; font-size: 18px; margin: 5px 0; }
+        .grammar-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-right: 5px solid #00695c; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .rule-box { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-right: 5px solid #ff9800; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .warning-box { background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border-right: 5px solid #f44336; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .info-box { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-right: 5px solid #2196f3; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 22px; }
+        th { background: linear-gradient(135deg, #00695c 0%, #00897b 100%); color: white; padding: 15px; text-align: center; }
+        td { padding: 12px 15px; border: 1px solid #ddd; text-align: center; }
+        tr:nth-child(even) { background: #f8f9fa; }
+        tr:hover { background: #e8f5e9; }
+        .pronoun-cell { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); font-weight: bold; color: #00695c; }
+        .example-box { background: #f8f9fa; border-radius: 10px; padding: 20px; margin: 15px 0; border-right: 4px solid #00897b; }
+        .example-ar { font-size: 28px; color: #2c3e50; margin-bottom: 8px; }
+        .example-en { font-family: Georgia, serif; font-size: 16px; color: #666; direction: ltr; text-align: left; }
+        .home-btn { position: fixed; top: 20px; left: 20px; width: 45px; height: 45px; background: linear-gradient(135deg, #00695c 0%, #00897b 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 15px rgba(0, 105, 92, 0.4); z-index: 1001; transition: all 0.3s; }
+        .home-btn:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(0, 105, 92, 0.5); }
+        .home-btn svg { width: 22px; height: 22px; fill: white; }
+        .formula-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px; padding: 25px; margin: 20px 0; text-align: center; }
+        .formula { font-size: 36px; color: #00695c; font-weight: bold; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 20px 0; }
+        .vocab-item { background: white; border-radius: 10px; padding: 15px; border: 2px solid #e0e0e0; transition: all 0.3s; }
+        .vocab-item:hover { border-color: #00897b; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .vocab-ar { font-size: 26px; color: #00695c; font-weight: bold; }
+        .vocab-en { font-family: Georgia, serif; font-size: 14px; color: #666; }
+        @media (max-width: 768px) { .arabic-large { font-size: 32px; } .arabic-medium { font-size: 26px; } .section-title { font-size: 28px; } table { font-size: 18px; } }
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="home-btn" title="Back to Home">
+    <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+</a>
+
+<nav class="nav-container">
+    <div class="nav-title">المحاضرة الثالثة - Lecture 3</div>
+    <div class="nav-links">
+        <a href="#verb"><span class="nav-ar">الفعل</span><span class="nav-en">Verb</span></a>
+        <a href="#haal"><span class="nav-ar">الحال</span><span class="nav-en">Haal</span></a>
+        <a href="#sahib"><span class="nav-ar">صاحب الحال</span><span class="nav-en">Owner</span></a>
+        <a href="#examples"><span class="nav-ar">أمثلة</span><span class="nav-en">Examples</span></a>
+        <a href="#vocab"><span class="nav-ar">المفردات</span><span class="nav-en">Vocabulary</span></a>
+    </div>
+</nav>
+
+<div class="main-title">
+    <h1>المُحَاضَرَةُ الثَّالِثَةُ</h1>
+    <div class="subtitle">Lecture 3 - الدَّرْسُ العَاشِرُ (Lesson 10)</div>
+</div>
+
+<!-- Verb Section -->
+<section class="section" id="verb">
+    <h2 class="section-title">الفِعْلُ: رَكَعَ - يَرْكَعُ</h2>
+    <p class="english-text">The Verb: To bow / To kneel down (in prayer)</p>
+
+    <div class="formula-box">
+        <div class="formula">رَكَعَ - يَرْكَعُ - ارْكَعْ - رُكُوعًا</div>
+        <p class="english-text">Past - Present - Imperative - Masdar (Bowing)</p>
+    </div>
+
+    <h3 class="section-subtitle">جَدْوَلُ التَّصْرِيفِ - Conjugation Table</h3>
+
+    <table>
+        <tr><th>الضَّمِير</th><th>المَاضِي</th><th>المُضَارِع</th><th>الأَمْر</th></tr>
+        <tr><td class="pronoun-cell">أَنَا</td><td>رَكَعْتُ</td><td>أَرْكَعُ</td><td>-</td></tr>
+        <tr><td class="pronoun-cell">نَحْنُ</td><td>رَكَعْنَا</td><td>نَرْكَعُ</td><td>-</td></tr>
+        <tr><td class="pronoun-cell">أَنْتَ</td><td>رَكَعْتَ</td><td>تَرْكَعُ</td><td>ارْكَعْ</td></tr>
+        <tr><td class="pronoun-cell">أَنْتِ</td><td>رَكَعْتِ</td><td>تَرْكَعِينَ</td><td>ارْكَعِي</td></tr>
+        <tr><td class="pronoun-cell">أَنْتُمَا</td><td>رَكَعْتُمَا</td><td>تَرْكَعَانِ</td><td>ارْكَعَا</td></tr>
+        <tr><td class="pronoun-cell">أَنْتُمْ</td><td>رَكَعْتُمْ</td><td>تَرْكَعُونَ</td><td>ارْكَعُوا</td></tr>
+        <tr><td class="pronoun-cell">أَنْتُنَّ</td><td>رَكَعْتُنَّ</td><td>تَرْكَعْنَ</td><td>ارْكَعْنَ</td></tr>
+        <tr><td class="pronoun-cell">هُوَ</td><td>رَكَعَ</td><td>يَرْكَعُ</td><td>-</td></tr>
+        <tr><td class="pronoun-cell">هِيَ</td><td>رَكَعَتْ</td><td>تَرْكَعُ</td><td>-</td></tr>
+        <tr><td class="pronoun-cell">هُمَا (م)</td><td>رَكَعَا</td><td>يَرْكَعَانِ</td><td>-</td></tr>
+        <tr><td class="pronoun-cell">هُمَا (مؤ)</td><td>رَكَعَتَا</td><td>تَرْكَعَانِ</td><td>-</td></tr>
+        <tr><td class="pronoun-cell">هُمْ</td><td>رَكَعُوا</td><td>يَرْكَعُونَ</td><td>-</td></tr>
+        <tr><td class="pronoun-cell">هُنَّ</td><td>رَكَعْنَ</td><td>يَرْكَعْنَ</td><td>-</td></tr>
+    </table>
+
+    <div class="example-box">
+        <div class="example-ar">ارْكَعُوا للهِ سُبْحَانَهُ وَتَعَالَى</div>
+        <div class="example-en">Bow to Allah, Glorified and Exalted is He</div>
+    </div>
+</section>
+
+<!-- Haal Section -->
+<section class="section" id="haal">
+    <h2 class="section-title">الحَالُ - The State / Condition</h2>
+    <p class="english-text">Describes the state or condition of the doer or object when the action occurs</p>
+
+    <div class="formula-box">
+        <div class="formula">الحَالُ: اسْمٌ مَنْصُوبٌ يُبَيِّنُ هَيْئَةَ صَاحِبِهِ عِنْدَ وُقُوعِ الفِعْلِ</div>
+        <p class="english-text">Haal: An accusative noun that describes the state of its owner when the action occurs</p>
+    </div>
+
+    <div class="rule-box">
+        <h4 class="arabic-medium">القَوَاعِدُ الأَسَاسِيَّة - Basic Rules</h4>
+        <p class="arabic-text">١. الحَالُ دَائِمًا يَكُونُ مَنْصُوبًا</p>
+        <p class="english-text">1. Haal is always in the accusative case (mansoob)</p>
+        <p class="arabic-text">٢. الحَالُ دَائِمًا يَكُونُ نَكِرَة</p>
+        <p class="english-text">2. Haal is always indefinite (nakirah)</p>
+        <p class="arabic-text">٣. صَاحِبُ الحَالِ دَائِمًا يَكُونُ مَعْرِفَة</p>
+        <p class="english-text">3. The owner of the Haal is always definite (ma'rifah)</p>
+    </div>
+</section>
+
+<!-- Sahib al-Haal Section -->
+<section class="section" id="sahib">
+    <h2 class="section-title">صَاحِبُ الحَالِ - Owner of the State</h2>
+    <p class="english-text">The noun whose state is being described</p>
+
+    <div class="grammar-box">
+        <h4 class="arabic-medium">قَاعِدَةُ المُطَابَقَة - Agreement Rule</h4>
+        <p class="arabic-text">إِذَا كَانَ صَاحِبُ الحَالِ مُذَكَّرًا، فَإِنَّ الحَالَ يَكُونُ مُذَكَّرًا</p>
+        <p class="english-text">If the owner is masculine, the Haal is masculine</p>
+        <p class="arabic-text">إِذَا كَانَ صَاحِبُ الحَالِ مُؤَنَّثًا، فَإِنَّ الحَالَ يَكُونُ مُؤَنَّثًا</p>
+        <p class="english-text">If the owner is feminine, the Haal is feminine</p>
+    </div>
+
+    <h3 class="section-subtitle">الحَالُ المُفْرَد - Single Haal</h3>
+
+    <table>
+        <tr><th>المُذَكَّر</th><th>المُؤَنَّث</th><th>المَعْنَى</th></tr>
+        <tr><td>مُبَكِّرًا</td><td>مُبَكِّرَةً</td><td>early</td></tr>
+        <tr><td>مُتَأَخِّرًا</td><td>مُتَأَخِّرَةً</td><td>late</td></tr>
+        <tr><td>مَسْرُورًا</td><td>مَسْرُورَةً</td><td>happy</td></tr>
+        <tr><td>حَزِينًا</td><td>حَزِينَةً</td><td>sad</td></tr>
+        <tr><td>جَالِسًا</td><td>جَالِسَةً</td><td>sitting</td></tr>
+        <tr><td>وَاقِفًا</td><td>وَاقِفَةً</td><td>standing</td></tr>
+        <tr><td>رَاكِبًا</td><td>رَاكِبَةً</td><td>riding</td></tr>
+        <tr><td>مَاشِيًا</td><td>مَاشِيَةً</td><td>walking</td></tr>
+    </table>
+</section>
+
+<!-- Examples Section -->
+<section class="section" id="examples">
+    <h2 class="section-title">أَمْثِلَة - Examples</h2>
+
+    <div class="example-box">
+        <div class="example-ar">ذَهَبْتُ إِلَى المَدْرَسَةِ اليَوْمَ <span style="color: #00695c; font-weight: bold;">مُبَكِّرًا</span></div>
+        <div class="example-en">I went to school today <strong>early</strong></div>
+        <div class="english-text" style="color: #888; font-style: italic;">مُبَكِّرًا = Haal (masculine, matching "I" - male speaker)</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">ذَهَبَتْ لَيْلَى إِلَى الجَامِعَةِ <span style="color: #00695c; font-weight: bold;">مُتَأَخِّرَةً</span></div>
+        <div class="example-en">Layla went to the university <strong>late</strong></div>
+        <div class="english-text" style="color: #888; font-style: italic;">مُتَأَخِّرَةً = Haal (feminine, matching "Layla")</div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">ذَهَبَتِ الطَّبِيبَةُ اليَوْمَ إِلَى المُسْتَشْفَى <span style="color: #00695c; font-weight: bold;">مُبَكِّرَةً</span></div>
+        <div class="example-en">The doctor (f) went to the hospital today <strong>early</strong></div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">رَجَعْتُ إِلَى البَيْتِ <span style="color: #00695c; font-weight: bold;">مُتَأَخِّرًا</span></div>
+        <div class="example-en">I returned home <strong>late</strong></div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">جَاءَ الطَّالِبُ <span style="color: #00695c; font-weight: bold;">رَاكِبًا</span></div>
+        <div class="example-en">The student came <strong>riding</strong></div>
+    </div>
+
+    <div class="example-box">
+        <div class="example-ar">جَاءَتِ الطَّالِبَةُ <span style="color: #00695c; font-weight: bold;">مَاشِيَةً</span></div>
+        <div class="example-en">The (female) student came <strong>walking</strong></div>
+    </div>
+
+    <div class="info-box">
+        <h4>الإِعْرَاب - Grammatical Analysis</h4>
+        <p class="arabic-text"><strong>مُبَكِّرًا:</strong> حَالٌ مَنْصُوبٌ وَعَلَامَةُ نَصْبِهِ الفَتْحَة</p>
+        <p class="english-text">مُبَكِّرًا: Haal, accusative, its sign of accusative is the fathah</p>
+    </div>
+</section>
+
+<!-- Vocabulary Section -->
+<section class="section" id="vocab">
+    <h2 class="section-title">المُفْرَدَاتُ - Vocabulary</h2>
+
+    <h3 class="section-subtitle">كَلِمَات الحَال - Haal Words</h3>
+    <div class="vocab-grid">
+        <div class="vocab-item"><div class="vocab-ar">مُبَكِّرًا</div><div class="vocab-en">early</div></div>
+        <div class="vocab-item"><div class="vocab-ar">مُتَأَخِّرًا</div><div class="vocab-en">late</div></div>
+        <div class="vocab-item"><div class="vocab-ar">مَسْرُورًا</div><div class="vocab-en">happy, pleased</div></div>
+        <div class="vocab-item"><div class="vocab-ar">حَزِينًا</div><div class="vocab-en">sad</div></div>
+        <div class="vocab-item"><div class="vocab-ar">جَالِسًا</div><div class="vocab-en">sitting</div></div>
+        <div class="vocab-item"><div class="vocab-ar">وَاقِفًا</div><div class="vocab-en">standing</div></div>
+        <div class="vocab-item"><div class="vocab-ar">رَاكِبًا</div><div class="vocab-en">riding</div></div>
+        <div class="vocab-item"><div class="vocab-ar">مَاشِيًا</div><div class="vocab-en">walking</div></div>
+    </div>
+
+    <h3 class="section-subtitle">أَفْعَال - Verbs</h3>
+    <div class="vocab-grid">
+        <div class="vocab-item"><div class="vocab-ar">رَكَعَ - يَرْكَعُ</div><div class="vocab-en">to bow (in prayer)</div></div>
+        <div class="vocab-item"><div class="vocab-ar">رَجَعَ - يَرْجِعُ</div><div class="vocab-en">to return</div></div>
+        <div class="vocab-item"><div class="vocab-ar">جَاءَ - يَجِيءُ</div><div class="vocab-en">to come</div></div>
+        <div class="vocab-item"><div class="vocab-ar">ذَهَبَ - يَذْهَبُ</div><div class="vocab-en">to go</div></div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 30px; color: #666;">
+    <p>ARB303 - الدَّوْرَةُ الرَّابِعَةُ - المُحَاضَرَةُ الثَّالِثَةُ</p>
+    <p style="font-family: Georgia, serif; margin-top: 10px;">Madinah Arabic Book 3 - Lecture 3</p>
+</footer>
+
+</body>
+</html>
