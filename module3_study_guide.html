@@ -48,6 +48,14 @@
         .vocab-item:hover { border-color: #00897b; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .vocab-ar { font-size: 26px; color: #00695c; font-weight: bold; }
         .vocab-en { font-family: Georgia, serif; font-size: 14px; color: #666; }
+        .answer-btn { background: linear-gradient(135deg, #00695c 0%, #00897b 100%); color: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 18px; cursor: pointer; font-family: 'Amiri', serif; margin: 10px 0; transition: all 0.3s; }
+        .answer-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,105,92,0.3); }
+        .answer-content { display: none; margin-top: 15px; padding: 15px; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 10px; }
+        .answer-content.show { display: block; }
+        .exercise-box { background: #f8f9fa; border-radius: 10px; padding: 25px; margin: 20px 0; border-right: 4px solid #ff9800; }
+        .dialogue-line { padding: 10px 0; border-bottom: 1px solid #eee; }
+        .dialogue-speaker { font-weight: bold; color: #00695c; font-size: 24px; }
+        .dialogue-text { font-size: 24px; color: #2c3e50; }
         @media (max-width: 768px) { .arabic-large { font-size: 32px; } .arabic-medium { font-size: 26px; } .section-title { font-size: 28px; } table { font-size: 18px; } }
     </style>
 </head>
@@ -64,14 +72,17 @@
         <a href="#haal"><span class="nav-ar">الحال</span><span class="nav-en">Haal</span></a>
         <a href="#sahib"><span class="nav-ar">صاحب الحال</span><span class="nav-en">Owner</span></a>
         <a href="#examples"><span class="nav-ar">أمثلة</span><span class="nav-en">Examples</span></a>
+        <a href="#numbers"><span class="nav-ar">الأعداد</span><span class="nav-en">Numbers</span></a>
         <a href="#vocab"><span class="nav-ar">المفردات</span><span class="nav-en">Vocabulary</span></a>
+        <a href="#exercises"><span class="nav-ar">التمارين</span><span class="nav-en">Exercises</span></a>
+        <a href="#dialogue"><span class="nav-ar">الحوار</span><span class="nav-en">Dialogue</span></a>
         <a href="#mcq"><span class="nav-ar">أسئلة</span><span class="nav-en">MCQ</span></a>
     </div>
 </nav>
 
 <div class="main-title">
     <h1>المُحَاضَرَةُ الثَّالِثَةُ</h1>
-    <div class="subtitle">Lecture 3 - الدَّرْسُ العَاشِرُ (Lesson 10)</div>
+    <div class="subtitle">Lecture 3 - الدَّرْسُ العَاشِرُ وَالحَادِي عَشَرَ (Lessons 10 & 11)</div>
 </div>
 
 <!-- Verb Section -->
@@ -201,7 +212,52 @@
     </div>
 </section>
 
-<!-- Vocabulary Section -->
+<!-- Beauty of Arabic in Reading Numbers - Pages 8-11 -->
+<section class="section" id="numbers">
+    <h2 class="section-title">مِنْ جَمَالِ اللُّغَةِ العَرَبِيَّةِ فِي قِرَاءَةِ الأَعْدَادِ</h2>
+    <p class="english-text">From the Beauty of the Arabic Language in Reading Numbers</p>
+
+    <div class="info-box">
+        <p class="arabic-text">اللُّغَةُ العَرَبِيَّةُ لُغَةٌ مَرِنَةٌ جِدًّا، وَمِنْ ذَلِكَ مَا نَجِدُهُ فِي دَرْسِ الأَعْدَادِ، وَكَيْفِيَّةِ قِرَاءَتِهَا.</p>
+        <p class="english-text">The Arabic language is a very flexible language, and this is evident in the lesson of numbers and how to read them.</p>
+        <p class="arabic-text">فَالعَدَدُ فِي اللُّغَةِ العَرَبِيَّةِ يُمْكِنُ أَنْ تَقْرَأَهُ مِنَ اليَمِينِ إِلَى اليَسَارِ (From right to left)، كَمَا أَنَّكَ أَيْضًا يُمْكِنُ أَنْ تَقْرَأَ العَدَدَ مِنَ اليَسَارِ إِلَى اليَمِينِ، وَهَذَا هُوَ الشَّائِعُ فِي اللُّغَةِ العَرَبِيَّةِ.</p>
+        <p class="english-text">Numbers in Arabic can be read from right to left, and also from left to right - the latter being the more common way in Arabic.</p>
+    </div>
+
+    <h3 class="section-subtitle">جَدْوَلُ قِرَاءَةِ الأَعْدَادِ - Number Reading Table</h3>
+
+    <table>
+        <tr><th>العَدَد</th><th>القِرَاءَة</th></tr>
+        <tr>
+            <td class="pronoun-cell">اشْتَرَيْتُ 43 كِتَابًا</td>
+            <td>
+                <p>اشْتَرَيْتُ ثَلَاثَةً وَأَرْبَعِينَ كِتَابًا (شَائِعَة)</p>
+                <p style="color: #888;">اشْتَرَيْتُ أَرْبَعِينَ وَثَلَاثَةً كُتُبٍ</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">فِي المَصْنَعِ 125 عَامِلًا</td>
+            <td>
+                <p>فِي المَصْنَعِ مِائَةٌ وَخَمْسَةٌ وَعِشْرُونَ عَامِلًا (شَائِعَة)</p>
+                <p style="color: #888;">فِي المَصْنَعِ خَمْسَةٌ وَعِشْرُونَ وَمِائَةُ عَامِل</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="pronoun-cell">سَأُسَافِرُ إِلَى السُّعُودِيَّةِ فِي سَنَةِ 1439هـ</td>
+            <td>
+                <p>سَأُسَافِرُ إِلَى السُّعُودِيَّةِ فِي سَنَةِ أَلْفٍ وَأَرْبَعِمِائَةٍ وَتِسْعَةٍ وَثَلَاثِينَ (شَائِعَة)</p>
+                <p style="color: #888;">سَأُسَافِرُ إِلَى السُّعُودِيَّةِ فِي سَنَةِ تِسْعَةٍ وَثَلَاثِينَ وَأَرْبَعِمِائَةٍ وَأَلْفٍ</p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="grammar-box">
+        <p class="arabic-text"><strong>مُلَاحَظَة:</strong> الطَّرِيقَةُ الشَّائِعَةُ هِيَ قِرَاءَةُ العَدَدِ مِنَ اليَسَارِ إِلَى اليَمِينِ (مِنَ الأَكْبَرِ إِلَى الأَصْغَرِ)</p>
+        <p class="english-text">Note: The common way is to read the number from left to right (from the largest to the smallest)</p>
+    </div>
+</section>
+
+<!-- Vocabulary Section (Expanded) -->
 <section class="section" id="vocab">
     <h2 class="section-title">المُفْرَدَاتُ - Vocabulary</h2>
 
@@ -219,10 +275,424 @@
 
     <h3 class="section-subtitle">أَفْعَال - Verbs</h3>
     <div class="vocab-grid">
-        <div class="vocab-item"><div class="vocab-ar">رَكَعَ - يَرْكَعُ</div><div class="vocab-en">to bow (in prayer)</div></div>
+        <div class="vocab-item"><div class="vocab-ar">رَكَعَ - يَرْكَعُ</div><div class="vocab-en">(a-a) to bow in prayer</div></div>
+        <div class="vocab-item"><div class="vocab-ar">سَجَدَ - يَسْجُدُ</div><div class="vocab-en">(a-u) to perform sajdah</div></div>
+        <div class="vocab-item"><div class="vocab-ar">فَعَلَ - يَفْعَلُ</div><div class="vocab-en">(a-a) to do</div></div>
+        <div class="vocab-item"><div class="vocab-ar">رَكِبَ - يَرْكَبُ</div><div class="vocab-en">(i-a) to ride</div></div>
+        <div class="vocab-item"><div class="vocab-ar">عَمِلَ - يَعْمَلُ</div><div class="vocab-en">(i-a) to work</div></div>
         <div class="vocab-item"><div class="vocab-ar">رَجَعَ - يَرْجِعُ</div><div class="vocab-en">to return</div></div>
         <div class="vocab-item"><div class="vocab-ar">جَاءَ - يَجِيءُ</div><div class="vocab-en">to come</div></div>
         <div class="vocab-item"><div class="vocab-ar">ذَهَبَ - يَذْهَبُ</div><div class="vocab-en">to go</div></div>
+    </div>
+
+    <h3 class="section-subtitle">الكَلِمَاتُ الجَدِيدَة - New Words</h3>
+    <div class="vocab-grid">
+        <div class="vocab-item"><div class="vocab-ar">دَائِمًا</div><div class="vocab-en">always</div></div>
+        <div class="vocab-item"><div class="vocab-ar">أَحْيَانًا</div><div class="vocab-en">sometimes</div></div>
+        <div class="vocab-item"><div class="vocab-ar">مَرَّةً أُخْرَى</div><div class="vocab-en">once again</div></div>
+        <div class="vocab-item"><div class="vocab-ar">مَكْتَبٌ</div><div class="vocab-en">office</div></div>
+        <div class="vocab-item"><div class="vocab-ar">عَامِلٌ</div><div class="vocab-en">labourer</div></div>
+        <div class="vocab-item"><div class="vocab-ar">طُولٌ</div><div class="vocab-en">length</div></div>
+        <div class="vocab-item"><div class="vocab-ar">عَرْضٌ</div><div class="vocab-en">width</div></div>
+        <div class="vocab-item"><div class="vocab-ar">مَسَافَةٌ</div><div class="vocab-en">distance</div></div>
+        <div class="vocab-item"><div class="vocab-ar">كِيلُومِتْرٌ</div><div class="vocab-en">kilometre</div></div>
+        <div class="vocab-item"><div class="vocab-ar">سَنْتِيمِتْرٌ</div><div class="vocab-en">centimetre</div></div>
+        <div class="vocab-item"><div class="vocab-ar">مِتْرٌ</div><div class="vocab-en">metre</div></div>
+        <div class="vocab-item"><div class="vocab-ar">بَيْنَ</div><div class="vocab-en">between</div></div>
+        <div class="vocab-item"><div class="vocab-ar">بَيْنَهُمَا</div><div class="vocab-en">between them</div></div>
+    </div>
+
+    <h3 class="section-subtitle">جَدْوَلُ المُفْرَدِ وَالجَمْعِ - Singular & Plural Table</h3>
+    <table>
+        <tr><th>الكَلِمَة (Singular)</th><th>الجَمْع (Plural)</th></tr>
+        <tr><td>مَصْنَعٌ</td><td>مَصَانِعُ</td></tr>
+        <tr><td>مَرَّةٌ</td><td>مَرَّاتٌ</td></tr>
+        <tr><td>عَامِلٌ</td><td>عُمَّالٌ</td></tr>
+        <tr><td>طُولٌ</td><td>أَطْوَالٌ</td></tr>
+        <tr><td>كِيلُو مِتْر</td><td>كِيلُو مِتْرَاتٌ</td></tr>
+        <tr><td>عَمَلٌ</td><td>أَعْمَالٌ</td></tr>
+        <tr><td>مَكْتَبٌ</td><td>مَكَاتِبُ</td></tr>
+        <tr><td>مَطَارٌ</td><td>مَطَارَاتٌ</td></tr>
+        <tr><td>مَسَافَةٌ</td><td>مَسَافَاتٌ</td></tr>
+    </table>
+
+    <h3 class="section-subtitle">الكَلِمَةُ وَمُضَادُّهَا - Antonyms</h3>
+    <table>
+        <tr><th>الكَلِمَة</th><th>مُضَادُّهَا (عَكْسُهَا)</th></tr>
+        <tr><td>دَائِمًا (Always)</td><td>أَبَدًا (Never)</td></tr>
+        <tr><td>مُبَكِّرًا (Early)</td><td>مُتَأَخِّرًا (Late)</td></tr>
+        <tr><td>عَرْضٌ (Width)</td><td>طُولٌ (Length)</td></tr>
+    </table>
+</section>
+
+<!-- Exercises Section - Pages 14-44 -->
+<section class="section" id="exercises">
+    <h2 class="section-title">تَمَارِينُ الكِتَابِ - Book Exercises</h2>
+    <p class="english-text">Exercises from Lessons 10 & 11 with answers</p>
+
+    <!-- Exercise 1 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ الأَوَّلُ - Exercise 1</h3>
+        <p class="arabic-text">١ - أَجِبْ عَنِ الأَسْئِلَةِ الآتِيَةِ:</p>
+        <p class="english-text">Answer the following questions:</p>
+
+        <p class="arabic-text">( ١ ) لِزِيَارَةِ مَنْ ذَهَبَ زَكَرِيَّا؟</p>
+        <p class="arabic-text">( ٢ ) مَتَى ذَهَبَ؟</p>
+        <p class="arabic-text">( ٣ ) أَيْنَ يَذْهَبُ حَامِدٌ بَعْدَ صَلَاةِ الفَجْرِ؟</p>
+        <p class="arabic-text">( ٤ ) مَتَى يَرْجِعُ مِنَ السُّوقِ؟</p>
+        <p class="arabic-text">( ٥ ) مَاذَا يَفْعَلُ فِي البَيْتِ؟</p>
+        <p class="arabic-text">( ٦ ) مَتَى يَذْهَبُ إِلَى المَصْنَعِ؟</p>
+        <p class="arabic-text">( ٧ ) كَمْ عَامِلًا يَعْمَلُ فِي مَصْنَعِهِ؟</p>
+        <p class="arabic-text">( ٨ ) كَمْ مُهَنْدِسًا يَعْمَلُ فِي مَصْنَعِهِ؟</p>
+
+        <button class="answer-btn" onclick="this.nextElementSibling.classList.toggle('show')">الإِجَابَة - Show Answer</button>
+        <div class="answer-content">
+            <p class="arabic-text">( ١ ) ذَهَبَ لِزِيَارَةِ حَامِدٍ.</p>
+            <p class="arabic-text">( ٢ ) ذَهَبَ بَعْدَ صَلَاةِ الفَجْرِ.</p>
+            <p class="arabic-text">( ٣ ) يَذْهَبُ حَامِدٌ إِلَى السُّوقِ بَعْدَ صَلَاةِ الفَجْرِ.</p>
+            <p class="arabic-text">( ٤ ) يَرْجِعُ فِي السَّاعَةِ السَّابِعَةِ، وَأَحْيَانًا فِي السَّاعَةِ الثَّامِنَةِ.</p>
+            <p class="arabic-text">( ٥ ) يَقْرَأُ الصُّحُفَ وَيَسْمَعُ الأَخْبَارَ مِنَ الإِذَاعَةِ.</p>
+            <p class="arabic-text">( ٦ ) يَذْهَبُ فِي السَّاعَةِ التَّاسِعَةِ وَالنِّصْفِ.</p>
+            <p class="arabic-text">( ٧ ) يَعْمَلُ فِي مَصْنَعِهِ مِائَةٌ وَخَمْسَةٌ وَعِشْرُونَ عَامِلًا.</p>
+            <p class="arabic-text">( ٨ ) يَعْمَلُ فِيهِ مُهَنْدِسَانِ.</p>
+        </div>
+    </div>
+
+    <!-- Exercise 2 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ الثَّانِي - Exercise 2</h3>
+        <p class="arabic-text">٢ - صَحِّحْ مَا يَلِي:</p>
+        <p class="english-text">Correct the following:</p>
+
+        <p class="arabic-text">( ١ ) حَامِدٌ ابْنُ مُوسَى.</p>
+        <p class="arabic-text">( ٢ ) يَذْهَبُ حَامِدٌ إِلَى السُّوقِ أَحْيَانًا.</p>
+        <p class="arabic-text">( ٣ ) يَذْهَبُ حَامِدٌ إِلَى المَصْنَعِ فِي السَّاعَةِ الثَّامِنَةِ وَالنِّصْفِ.</p>
+        <p class="arabic-text">( ٤ ) يَذْهَبُ حَامِدٌ إِلَى المَصْنَعِ بَعْدَ صَلَاةِ الظُّهْرِ أَيْضًا.</p>
+        <p class="arabic-text">( ٥ ) يَجْلِسُ فِي البَيْتِ بَعْدَ صَلَاةِ العَصْرِ.</p>
+        <p class="arabic-text">( ٦ ) مَصْنَعُ حَامِدٍ كَبِيرٌ.</p>
+
+        <button class="answer-btn" onclick="this.nextElementSibling.classList.toggle('show')">الإِجَابَة - Show Answer</button>
+        <div class="answer-content">
+            <p class="arabic-text">( ١ ) حَامِدٌ <span style="color: #f44336; font-weight: bold;">أَبُو</span> مُوسَى. (ليس ابن)</p>
+            <p class="arabic-text">( ٢ ) يَذْهَبُ حَامِدٌ إِلَى السُّوقِ <span style="color: #f44336; font-weight: bold;">دَائِمًا</span>. (ليس أحيانًا)</p>
+            <p class="arabic-text">( ٣ ) يَذْهَبُ حَامِدٌ إِلَى المَصْنَعِ فِي السَّاعَةِ <span style="color: #f44336; font-weight: bold;">التَّاسِعَةِ</span> وَالنِّصْفِ. (ليس الثامنة)</p>
+            <p class="arabic-text">( ٤ ) <span style="color: #f44336; font-weight: bold;">لَا يَذْهَبُ</span> حَامِدٌ إِلَى المَصْنَعِ بَعْدَ صَلَاةِ الظُّهْرِ.</p>
+            <p class="arabic-text">( ٥ ) يَجْلِسُ فِي <span style="color: #f44336; font-weight: bold;">مَكْتَبِهِ</span> بَعْدَ صَلَاةِ العَصْرِ. (ليس البيت)</p>
+            <p class="arabic-text">( ٦ ) مَصْنَعُ حَامِدٍ <span style="color: #f44336; font-weight: bold;">لَيْسَ بِكَبِيرٍ (صَغِيرٌ)</span>.</p>
+        </div>
+    </div>
+
+    <!-- Exercise 3 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ الثَّالِثُ - Exercise 3</h3>
+        <p class="arabic-text">٣ - تَأَمَّلِ الأَمْثِلَةَ الآتِيَةَ:</p>
+        <p class="english-text">Contemplate the following examples (Past vs. Present):</p>
+
+        <table>
+            <tr><th>المَاضِي</th><th>المُضَارِع</th></tr>
+            <tr><td>ذَهَبَ عَلِيٌّ إِلَى المَدْرَسَةِ أَمْسِ.</td><td>يَذْهَبُ عَلِيٌّ إِلَى المَدْرَسَةِ كُلَّ يَوْمٍ.</td></tr>
+            <tr><td>قَرَأَ إِسْمَاعِيلُ القُرْآنَ.</td><td>يَقْرَأُ إِسْمَاعِيلُ القُرْآنَ بَعْدَ صَلَاةِ الفَجْرِ كُلَّ يَوْمٍ.</td></tr>
+            <tr><td>غَسَلَ الرَّجُلُ سَيَّارَتَهُ.</td><td>يَغْسِلُ الرَّجُلُ سَيَّارَتَهُ كُلَّ أُسْبُوعٍ.</td></tr>
+        </table>
+    </div>
+
+    <!-- Exercise 4 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ الرَّابِعُ - Exercise 4</h3>
+        <p class="arabic-text">٤ - تَأَمَّلِ الأَمْثِلَةَ وَاكْتُبْ مُضَارِعَ الأَفْعَالِ الآتِيَةِ:</p>
+        <p class="english-text">Look at the examples and write the present tense of the following verbs:</p>
+
+        <button class="answer-btn" onclick="this.nextElementSibling.classList.toggle('show')">الإِجَابَة - Show Answer</button>
+        <div class="answer-content">
+            <table>
+                <tr><th>المَاضِي</th><th>المُضَارِع</th><th>المَاضِي</th><th>المُضَارِع</th></tr>
+                <tr><td>كَتَبَ</td><td>يَكْتُبُ</td><td>سَمِعَ</td><td>يَسْمَعُ</td></tr>
+                <tr><td>جَلَسَ</td><td>يَجْلِسُ</td><td>ذَهَبَ</td><td>يَذْهَبُ</td></tr>
+                <tr><td>دَخَلَ</td><td>يَدْخُلُ</td><td>غَسَلَ</td><td>يَغْسِلُ</td></tr>
+                <tr><td>رَكَعَ</td><td>يَرْكَعُ</td><td>فَهِمَ</td><td>يَفْهَمُ</td></tr>
+                <tr><td>خَرَجَ</td><td>يَخْرُجُ</td><td>رَجَعَ</td><td>يَرْجِعُ</td></tr>
+                <tr><td>رَفَعَ</td><td>يَرْفَعُ</td><td>لَعِبَ</td><td>يَلْعَبُ</td></tr>
+                <tr><td>سَجَدَ</td><td>يَسْجُدُ</td><td>نَزَلَ</td><td>يَنْزِلُ</td></tr>
+                <tr><td>فَعَلَ</td><td>يَفْعَلُ</td><td>حَفِظَ</td><td>يَحْفَظُ</td></tr>
+                <tr><td>أَكَلَ</td><td>يَأْكُلُ</td><td>كَسَرَ</td><td>يَكْسِرُ</td></tr>
+                <tr><td>سَأَلَ</td><td>يَسْأَلُ</td><td>شَرِبَ</td><td>يَشْرَبُ</td></tr>
+                <tr><td>قَتَلَ</td><td>يَقْتُلُ</td><td>ضَرَبَ</td><td>يَضْرِبُ</td></tr>
+                <tr><td>فَتَحَ</td><td>يَفْتَحُ</td><td>رَكِبَ</td><td>يَرْكَبُ</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Exercise 5 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ الخَامِسُ - Exercise 5</h3>
+        <p class="arabic-text">٥ - أَكْمِلِ الجُمَلَ الآتِيَةَ بِوَضْعِ فِعْلٍ مُضَارِعٍ مُنَاسِبٍ فِي الفَرَاغِ:</p>
+        <p class="english-text">Complete the following sentences by placing an appropriate present tense verb in the blank:</p>
+
+        <p class="arabic-text">( ١ ) _____ أَبِي إِلَى السُّوقِ كُلَّ صَبَاحٍ.</p>
+        <p class="arabic-text">( ٢ ) مَتَى _____ أَبُوكَ مِنَ المَصْنَعِ؟</p>
+        <p class="arabic-text">( ٣ ) _____ أَحْمَدُ القَهْوَةَ وَ _____ يُوسُفُ الشَّايَ.</p>
+        <p class="arabic-text">( ٤ ) أَخِي _____ الصُّحُفَ وَ _____ الأَخْبَارَ مِنَ الإِذَاعَةِ كُلَّ صَبَاحٍ.</p>
+        <p class="arabic-text">( ٥ ) _____ المُدَرِّسُ عَلَى السَّبُّورَةِ.</p>
+        <p class="arabic-text">( ٦ ) _____ هِشَامٌ وَجْهَهُ بِالصَّابُونِ.</p>
+        <p class="arabic-text">( ٧ ) _____ المُدِيرُ مِنَ المَدْرَسَةِ فِي السَّاعَةِ الثَّانِيَةِ.</p>
+
+        <button class="answer-btn" onclick="this.nextElementSibling.classList.toggle('show')">الإِجَابَة - Show Answer</button>
+        <div class="answer-content">
+            <p class="arabic-text">( ١ ) <span style="color: #00695c; font-weight: bold;">يَذْهَبُ</span> أَبِي إِلَى السُّوقِ كُلَّ صَبَاحٍ.</p>
+            <p class="arabic-text">( ٢ ) مَتَى <span style="color: #00695c; font-weight: bold;">يَرْجِعُ / يَعُودُ</span> أَبُوكَ مِنَ المَصْنَعِ؟</p>
+            <p class="arabic-text">( ٣ ) <span style="color: #00695c; font-weight: bold;">يَشْرَبُ</span> أَحْمَدُ القَهْوَةَ وَ <span style="color: #00695c; font-weight: bold;">يَشْرَبُ</span> يُوسُفُ الشَّايَ.</p>
+            <p class="arabic-text">( ٤ ) أَخِي <span style="color: #00695c; font-weight: bold;">يَقْرَأُ</span> الصُّحُفَ وَ <span style="color: #00695c; font-weight: bold;">يَسْمَعُ</span> الأَخْبَارَ مِنَ الإِذَاعَةِ كُلَّ صَبَاحٍ.</p>
+            <p class="arabic-text">( ٥ ) <span style="color: #00695c; font-weight: bold;">يَكْتُبُ</span> المُدَرِّسُ عَلَى السَّبُّورَةِ.</p>
+            <p class="arabic-text">( ٦ ) <span style="color: #00695c; font-weight: bold;">يَغْسِلُ</span> هِشَامٌ وَجْهَهُ بِالصَّابُونِ.</p>
+            <p class="arabic-text">( ٧ ) <span style="color: #00695c; font-weight: bold;">يَخْرُجُ</span> المُدِيرُ مِنَ المَدْرَسَةِ فِي السَّاعَةِ الثَّانِيَةِ.</p>
+        </div>
+    </div>
+
+    <!-- Exercise 6 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ السَّادِسُ - Exercise 6</h3>
+        <p class="arabic-text">٦ - اقْرَأْ مَا يَلِي:</p>
+        <p class="english-text">Read the following (Numbers 21-30):</p>
+
+        <table>
+            <tr><th>الرَّقَم</th><th>القِرَاءَة</th><th>الرَّقَم</th><th>القِرَاءَة</th></tr>
+            <tr><td>٢١</td><td>وَاحِدٌ وَعِشْرُونَ طَالِبًا</td><td>٢٦</td><td>سِتَّةٌ وَعِشْرُونَ طَالِبًا</td></tr>
+            <tr><td>٢٢</td><td>اثْنَانِ وَعِشْرُونَ طَالِبًا</td><td>٢٧</td><td>سَبْعَةٌ وَعِشْرُونَ طَالِبًا</td></tr>
+            <tr><td>٢٣</td><td>ثَلَاثَةٌ وَعِشْرُونَ طَالِبًا</td><td>٢٨</td><td>ثَمَانِيَةٌ وَعِشْرُونَ طَالِبًا</td></tr>
+            <tr><td>٢٤</td><td>أَرْبَعَةٌ وَعِشْرُونَ طَالِبًا</td><td>٢٩</td><td>تِسْعَةٌ وَعِشْرُونَ طَالِبًا</td></tr>
+            <tr><td>٢٥</td><td>خَمْسَةٌ وَعِشْرُونَ طَالِبًا</td><td>٣٠</td><td>ثَلَاثُونَ طَالِبًا</td></tr>
+        </table>
+    </div>
+
+    <!-- Exercise 7 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ السَّابِعُ - Exercise 7</h3>
+        <p class="arabic-text">٧ - اقْرَأْ مَا يَلِي، ثُمَّ اكْتُبْهُ مَعَ كِتَابَةِ الأَرْقَامِ الوَارِدَةِ فِيهِ بِالحُرُوفِ:</p>
+        <p class="english-text">Read the following, then write the numbers in words:</p>
+
+        <p class="arabic-text">( ١ ) فِي الشَّهْرِ ٢٩ أَوْ ٣٠ يَوْمًا.</p>
+        <p class="arabic-text">( ٢ ) فِي هَذِهِ الحَافِلَةِ ٢٥ رَاكِبًا.</p>
+        <p class="arabic-text">( ٣ ) جَاءَ اليَوْمَ ٢٢ طَالِبًا جَدِيدًا.</p>
+        <p class="arabic-text">( ٤ ) فِي هَذَا الكِتَابِ ٢١ دَرْسًا.</p>
+        <p class="arabic-text">( ٥ ) هَذَا المَلْعَبُ طُولُهُ ٢٨ مِتْرًا وَعَرْضُهُ ٢٤ مِتْرًا.</p>
+        <p class="arabic-text">( ٦ ) كَمْ كِيلُومِتْرًا المَسَافَةُ بَيْنَ المَدِينَةِ وَالمَطَارِ؟ المَسَافَةُ بَيْنَهُمَا ٢٣ كِيلُومِتْرًا.</p>
+        <p class="arabic-text">( ٧ ) هَذَا الدَّفْتَرُ طُولُهُ ٢٧ سَنْتِيمِتْرًا.</p>
+
+        <button class="answer-btn" onclick="this.nextElementSibling.classList.toggle('show')">الإِجَابَة - Show Answer</button>
+        <div class="answer-content">
+            <p class="arabic-text">( ١ ) فِي الشَّهْرِ <span style="color: #00695c; font-weight: bold;">تِسْعَةٌ وَعِشْرُونَ أَوْ ثَلَاثُونَ يَوْمًا</span>.</p>
+            <p class="arabic-text">( ٢ ) فِي هَذِهِ الحَافِلَةِ <span style="color: #00695c; font-weight: bold;">خَمْسَةٌ وَعِشْرُونَ رَاكِبًا</span>.</p>
+            <p class="arabic-text">( ٣ ) جَاءَ اليَوْمَ <span style="color: #00695c; font-weight: bold;">اثْنَانِ وَعِشْرُونَ طَالِبًا</span> جَدِيدًا.</p>
+            <p class="arabic-text">( ٤ ) فِي هَذَا الكِتَابِ <span style="color: #00695c; font-weight: bold;">وَاحِدٌ وَعِشْرُونَ دَرْسًا</span>.</p>
+            <p class="arabic-text">( ٥ ) هَذَا المَلْعَبُ طُولُهُ <span style="color: #00695c; font-weight: bold;">ثَمَانِيَةٌ وَعِشْرُونَ مِتْرًا</span> وَعَرْضُهُ <span style="color: #00695c; font-weight: bold;">أَرْبَعَةٌ وَعِشْرُونَ مِتْرًا</span>.</p>
+            <p class="arabic-text">( ٦ ) المَسَافَةُ بَيْنَهُمَا <span style="color: #00695c; font-weight: bold;">ثَلَاثَةٌ وَعِشْرُونَ كِيلُومِتْرًا</span>.</p>
+            <p class="arabic-text">( ٧ ) هَذَا الدَّفْتَرُ طُولُهُ <span style="color: #00695c; font-weight: bold;">سَبْعَةٌ وَعِشْرُونَ سَنْتِيمِتْرًا</span>.</p>
+        </div>
+    </div>
+
+    <!-- Exercise 8 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ الثَّامِنُ - Exercise 8</h3>
+        <p class="arabic-text">٨ - تَأَمَّلْ مَا يَلِي:</p>
+        <p class="english-text">Contemplate the following (Haal examples with مُبَكِّرًا × مُتَأَخِّرًا):</p>
+
+        <div class="grammar-box">
+            <p class="arabic-text">إِذَا كَانَ صَاحِبُ الحَالِ مُذَكَّرًا فَإِنَّ الحَالَ يَكُونُ مُذَكَّرًا وَإِذَا كَانَ صَاحِبُ الحَالِ مُؤَنَّثًا فَإِنَّ الحَالَ يَكُونُ مُؤَنَّثًا</p>
+            <p class="english-text">If the owner of Haal is masculine, Haal is masculine. If the owner is feminine, Haal is feminine.</p>
+            <p class="arabic-text" style="text-align: center; font-weight: bold;">الحَالُ دَائِمًا يَكُونُ مَنْصُوبًا</p>
+            <p class="english-text" style="text-align: center;">Haal is always accusative (mansoob)</p>
+        </div>
+
+        <div class="example-box">
+            <div class="example-ar">( ١ ) ذَهَبْتُ إِلَى المَدْرَسَةِ اليَوْمَ <span style="color: #00695c; font-weight: bold;">مُبَكِّرًا</span>. وَرَجَعْتُ إِلَى البَيْتِ <span style="color: #f44336; font-weight: bold;">مُتَأَخِّرًا</span>.</div>
+            <div class="example-en">I went to school today early. And I returned home late.</div>
+        </div>
+        <div class="example-box">
+            <div class="example-ar">( ٢ ) ذَهَبَتْ لَيْلَى إِلَى الجَامِعَةِ <span style="color: #f44336; font-weight: bold;">مُتَأَخِّرَةً</span>.</div>
+            <div class="example-en">Layla went to the university late.</div>
+        </div>
+        <div class="example-box">
+            <div class="example-ar">( ٣ ) ذَهَبَتِ الطَّبِيبَةُ اليَوْمَ إِلَى المُسْتَشْفَى <span style="color: #00695c; font-weight: bold;">مُبَكِّرَةً</span>.</div>
+            <div class="example-en">The doctor (f) went to the hospital today early.</div>
+        </div>
+    </div>
+
+    <!-- Exercise 9 -->
+    <div class="exercise-box">
+        <h3 class="section-subtitle">التَّمْرِينُ التَّاسِعُ - Exercise 9</h3>
+        <p class="arabic-text">٩ - كَوِّنْ جُمَلًا مُسْتَعْمِلًا الكَلِمَاتِ الآتِيَةَ:</p>
+        <p class="english-text">Form sentences using the following words:</p>
+
+        <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+            <span class="arabic-text" style="background: #e8f5e9; padding: 10px 20px; border-radius: 8px;">دَائِمًا</span>
+            <span class="arabic-text" style="background: #e3f2fd; padding: 10px 20px; border-radius: 8px;">أَحْيَانًا</span>
+            <span class="arabic-text" style="background: #fff3e0; padding: 10px 20px; border-radius: 8px;">مُتَأَخِّرًا</span>
+            <span class="arabic-text" style="background: #ffebee; padding: 10px 20px; border-radius: 8px;">مَرَّةً أُخْرَى</span>
+        </div>
+
+        <button class="answer-btn" onclick="this.nextElementSibling.classList.toggle('show')">الإِجَابَة - Show Answer</button>
+        <div class="answer-content">
+            <p class="arabic-text" style="color: #00695c;">أَنَا أُصَلِّي دَائِمًا فِي المَسْجِدِ الكَبِيرِ.</p>
+            <p class="english-text">I always pray in the big mosque.</p>
+            <p class="arabic-text" style="color: #00695c;">يَذْهَبُ أَخِي أَحْيَانًا إِلَى العَمَلِ مَاشِيًا.</p>
+            <p class="english-text">My brother sometimes goes to work walking.</p>
+            <p class="arabic-text" style="color: #00695c;">يَأْتِي أَخِي مِنَ العَمَلِ مُتَأَخِّرًا.</p>
+            <p class="english-text">My brother comes from work late.</p>
+            <p class="arabic-text" style="color: #00695c;">قَرَأْتُ سُورَةَ الحَدِيدِ وَسَأَقْرَأُهَا مَرَّةً أُخْرَى الآنَ.</p>
+            <p class="english-text">I read Surah Al-Hadid and I will read it once again now.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Dialogue Section - Pages 53-57 -->
+<section class="section" id="dialogue">
+    <h2 class="section-title">الحِوَار: فِي الحَافِلَةِ - Dialogue: On the Bus</h2>
+    <p class="english-text">A conversation between Faisal and Abdullah on the bus (Lesson 11)</p>
+
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">الأَوَّلُ : </span>
+        <span class="dialogue-text">السَّلَامُ عَلَيْكُمْ.</span>
+        <p class="english-text">The first: Peace be upon you.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">الثَّانِي : </span>
+        <span class="dialogue-text">وَعَلَيْكُمُ السَّلَامُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ.</span>
+        <p class="english-text">The second: And upon you be peace, mercy of Allah, and His blessings.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">الأَوَّلُ : </span>
+        <span class="dialogue-text">مَا اسْمُكَ يَا أَخِي؟</span>
+        <p class="english-text">The first: What is your name, brother?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">الثَّانِي : </span>
+        <span class="dialogue-text">اسْمِي عَبْدُ اللهِ، وَمَا اسْمُكَ؟</span>
+        <p class="english-text">The second: My name is Abdullah, and what is yours?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">الأَوَّلُ : </span>
+        <span class="dialogue-text">اسْمِي فَيْصَلٌ. أَطَالِبٌ أَنْتَ يَا عَبْدَ اللهِ؟</span>
+        <p class="english-text">The first: My name is Faisal. Are you a student, Abdullah?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">نَعَمْ.</span>
+        <p class="english-text">Abdullah: Yes.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">أَيْنَ تَدْرُسُ يَا أَخِي؟</span>
+        <p class="english-text">Faisal: Where do you study, brother?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">أَدْرُسُ بِجَامِعَةِ الرِّيَاضِ.</span>
+        <p class="english-text">Abdullah: I study at Riyadh University.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">فِي أَيِّ كُلِّيَّةٍ تَدْرُسُ؟</span>
+        <p class="english-text">Faisal: In which college do you study?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">أَدْرُسُ فِي كُلِّيَّةِ الهَنْدَسَةِ.</span>
+        <p class="english-text">Abdullah: I study in the College of Engineering.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">فِي أَيِّ سَنَةٍ تَدْرُسُ؟</span>
+        <p class="english-text">Faisal: In which year are you?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">أَدْرُسُ فِي السَّنَةِ الثَّانِيَةِ.</span>
+        <p class="english-text">Abdullah: I am in the second year.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">أَتَعْرِفُ المُهَنْدِسَ سَلْمَانَ؟</span>
+        <p class="english-text">Faisal: Do you know the engineer Salman?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">طَبْعًا. هُوَ أُسْتَاذِي. هُوَ أَحْسَنُ مُدَرِّسٍ فِي الكُلِّيَّةِ.</span>
+        <p class="english-text">Abdullah: Of course. He is my professor. He is the best teacher in the college.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">مَنْ هَؤُلَاءِ الفِتْيَةُ الَّذِينَ مَعَكَ؟ كَأَنَّهُمْ إِخْوَتُكَ.</span>
+        <p class="english-text">Faisal: Who are these young men with you? They look like your brothers.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">نَعَمْ. هَؤُلَاءِ إِخْوَتِي. لِي أَرْبَعَةُ إِخْوَةٍ وَثَلَاثُ أَخَوَاتٍ.</span>
+        <p class="english-text">Abdullah: Yes. These are my brothers. I have four brothers and three sisters.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">أَيْنَ يَدْرُسُ هَؤُلَاءِ؟</span>
+        <p class="english-text">Faisal: Where do they study?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">أَمَّا إِخْوَتِي فَكُلُّهُمْ يَدْرُسُونَ بِالجَامِعَةِ. عِيسَى - وَهُوَ أَكْبَرُ مِنِّي - يَدْرُسُ فِي كُلِّيَّةِ الطِّبِّ. وَإِبْرَاهِيمُ يَدْرُسُ فِي كُلِّيَّةِ التِّجَارَةِ. وَإِسْحَاقُ يَدْرُسُ فِي كُلِّيَّةِ الآدَابِ. وَإِسْمَاعِيلُ يَدْرُسُ فِي كُلِّيَّةِ العُلُومِ. وَهَؤُلَاءِ الثَّلَاثَةُ أَصْغَرُ مِنِّي. وَأَمَّا الأَخَوَاتُ فَيَدْرُسْنَ فِي المَدْرَسَةِ المُتَوَسِّطَةِ. زَيْنَبُ تَدْرُسُ فِي السَّنَةِ الأُولَى وَسَلْمَى تَدْرُسُ فِي السَّنَةِ الثَّانِيَةِ وَلَيْلَى تَدْرُسُ فِي السَّنَةِ الثَّالِثَةِ.</span>
+        <p class="english-text">Abdullah: As for my brothers, they all study at the university. Isa - who is older than me - studies in the College of Medicine. Ibrahim studies in the College of Commerce. Ishaq studies in the College of Arts. Ismail studies in the College of Science. These three are younger than me. As for the sisters, they study in middle school. Zainab is in the first year, Salma in the second year, and Layla in the third year.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">فِي أَيِّ مَدْرَسَةٍ تَدْرُسُ أَخَوَاتُكَ؟</span>
+        <p class="english-text">Faisal: In which school do your sisters study?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">يَدْرُسْنَ فِي مَدْرَسَةِ خَالِدِ بْنِ الوَلِيدِ لِلْبَنَاتِ بِمَكَّةَ.</span>
+        <p class="english-text">Abdullah: They study at Khalid ibn al-Walid School for Girls in Makkah.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">أَيْنَ تَسْكُنُونَ أَنْتُمْ؟</span>
+        <p class="english-text">Faisal: Where do you all live?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">إِخْوَتِي يَسْكُنُونَ فِي مَهَاجِعِ الجَامِعَةِ. أَمَّا أَنَا فَأَسْكُنُ مَعَ قَرِيبٍ لِي.</span>
+        <p class="english-text">Abdullah: My brothers live in the university dormitories. As for me, I live with a relative.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">أَمُتَزَوِّجٌ أَنْتَ يَا عَبْدَ اللهِ؟</span>
+        <p class="english-text">Faisal: Are you married, Abdullah?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">لَا. لَسْتُ بِمُتَزَوِّجٍ.</span>
+        <p class="english-text">Abdullah: No. I am not married.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">مَا عُنْوَانُكَ؟</span>
+        <p class="english-text">Faisal: What is your address?</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">هَذِهِ بِطَاقَتِي فِيهَا عُنْوَانِي.</span>
+        <p class="english-text">Abdullah: Here is my card, it has my address.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">فَيْصَلٌ : </span>
+        <span class="dialogue-text">أَشْكُرُكَ يَا أَخِي. أَنَا مَسْرُورٌ بِلِقَائِكَ... أَنَا سَأَنْزِلُ فِي المَحَطَّةِ القَادِمَةِ.</span>
+        <p class="english-text">Faisal: Thank you, brother. I am happy to meet you... I will get off at the next stop.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">عَبْدُ اللهِ : </span>
+        <span class="dialogue-text">فِي أَمَانِ اللهِ، وَإِلَى اللِّقَاءِ.</span>
+        <p class="english-text">Abdullah: In Allah's protection, and until we meet again.</p>
+    </div>
+    <div class="dialogue-line">
+        <span class="dialogue-speaker">السَّائِقُ (لِفَيْصَلٍ) : </span>
+        <span class="dialogue-text">هَذَا البَابُ لِلدُّخُولِ يَا سَيِّدِي. النُّزُولُ مِنْ هُنَاكَ.</span>
+        <p class="english-text">The driver (to Faisal): This door is for entry, sir. Exit is from there.</p>
     </div>
 </section>
 
@@ -324,6 +794,20 @@
     <p>ARB303 - الدَّوْرَةُ الرَّابِعَةُ - المُحَاضَرَةُ الثَّالِثَةُ</p>
     <p style="font-family: Georgia, serif; margin-top: 10px;">Madinah Arabic Book 3 - Lecture 3</p>
 </footer>
+
+<script>
+// Toggle answer visibility
+document.querySelectorAll('.answer-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        if (content.classList.contains('show')) {
+            this.textContent = 'الإِجَابَة - Show Answer';
+        } else {
+            this.textContent = 'إِخْفَاء - Hide Answer';
+        }
+    });
+});
+</script>
 
 </body>
 </html>
